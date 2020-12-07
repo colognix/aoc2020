@@ -8,7 +8,10 @@ def readInput(seperator):
             noObseol+=1
         else:
             break
-    input_clean = input_raw[:-noObseol]
+    if noObseol != 0:
+        input_clean = input_raw[:-noObseol]
+    else:
+        input_clean = input_raw
     input_sliced = input_clean.split(seperator)
     return input_sliced
 
